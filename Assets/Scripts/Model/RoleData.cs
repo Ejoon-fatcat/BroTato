@@ -1,18 +1,15 @@
+
 using System;
 
-namespace Model
-
+[Serializable]
+public class RoleData
 {
-    [Serializable]
-    public class RoleData
-    {
-        public int id;
-        public string name;
-        public string avatar;
-        public string describe;
-        public int slot;
-        public int record;
-        public int unlock;
-        public string unlockConditions;
-    }
+    public int id;
+    public string name;
+    public string avatar;
+    public string describe;
+    public int slot;
+    public int record;
+    public int unlock;
+    public string unlockConditions;
 }

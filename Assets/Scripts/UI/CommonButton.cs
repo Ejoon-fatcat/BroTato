@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,22 +11,25 @@ public class CommonButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private Image image;
     private TextMeshProUGUI text;
 
-    //获取组件
     private void Awake()
     {
         image = GetComponent<Image>();
         text = GetComponentInChildren<TextMeshProUGUI>();
     }
+
     
     public void OnPointerEnter(PointerEventData eventData)
     {
         image.color = new Color(255, 255, 255);
-        text.color = Color.black;
+        text.color = new Color(0, 0, 0);
+        
+        //音效
+        Instantiate(GameManager.Instance.menuMusic);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        image.color = Color.black;
+        image.color = new Color(0, 0, 0);
         text.color = new Color(255, 255, 255);
     }
 }

@@ -1,7 +1,7 @@
 # 默认忽略的文件
 /shelf/
 /workspace.xml
-# Rider 忽略的文件
+# Rider ignored files
 /contentModel.xml
 /.idea.Brotato.iml
 /modules.xml
